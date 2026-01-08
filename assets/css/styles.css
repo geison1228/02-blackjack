@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 20;
+    box-sizing: border-box;
+    background-color: #c5b205;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+
+
+.titulo {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: chocolate;
+    background-color: black;
+
+}
+
+.carta{
+position: relative;
+width: 150px ;
+left: 100px;     
+margin-left: -70px;
+
+}
