@@ -85,7 +85,7 @@ puntosComputadora = puntosComputadora + valorCarta( carta );
 puntosHTML[1].innerText = puntosComputadora;
 // <img class="carta" src
 const imgCarta = document.createElement('img');
-imgCarta.src = `cartas/cartas/${ carta }.png`;  // ruta de la carta
+imgCarta.src = `./cartas/${ carta }.png`;  // ruta de la carta
 imgCarta.classList.add('carta');  // agrega la clase carta
 divCartasComputadora.append( imgCarta ) ; // agrega la carta al div
 
@@ -122,7 +122,7 @@ puntosJugador = puntosJugador + valorCarta( carta );
 puntosHTML[0].innerText = puntosJugador;
 // <img class="carta" src
 const imgCarta = document.createElement('img');
-imgCarta.src = `cartas/cartas/${ carta }.png`;  // ruta de la carta
+imgCarta.src = `./cartas/${ carta }.png`;  // ruta de la carta
 imgCarta.classList.add('carta');  // agrega la clase carta
 
 divCartasJugador.append( imgCarta ) ; // agrega la carta al div
