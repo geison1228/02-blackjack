@@ -27,3 +27,42 @@ left: 100px;
 margin-left: -70px;
 
 }
+
+/* Ajustes para móviles sin tocar el HTML */
+@media (max-width: 768px) {
+    /* Reduce el tamaño de los títulos para que no ocupen toda la pantalla */
+    h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .titulo h1 {
+        font-size: 2.5rem !important;
+    }
+
+    /* Hace que los botones no se amontonen y sean fáciles de tocar */
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Ajusta el tamaño de las cartas para que quepan varias en fila */
+    #jugador-cartas img, #Computadora-cartas img {
+        width: 80px !important;
+        margin: 2px !important;
+    }
+
+    /* Elimina márgenes laterales excesivos en contenedores */
+    .container, .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    /* Mueve las reglas debajo del juego con un margen */
+    .col-md-3 {
+        margin-top: 20px;
+    }
+}
