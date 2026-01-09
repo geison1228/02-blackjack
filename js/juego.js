@@ -109,7 +109,7 @@ setTimeout(() => {   // tiempo para que se vea la ultima carta
     alert('Computadora gana');
     }
 
-    }, 100 );// fin del time Out linea 102
+    }, 200);// fin del time Out linea 102
 
 }
 
