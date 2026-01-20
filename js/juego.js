@@ -5,6 +5,10 @@
 * 2s = two of spades (espadas)
  */
 
+(() => {
+'use strict'
+
+// Variables y constantes
 let deck         = [];
 const tipos      = ['C', 'D', 'H', 'S'];
 const especiales = ['A', 'J', 'Q', 'K'];    
@@ -22,13 +26,11 @@ const puntosHTML           = document.querySelectorAll('small');  // selecciona 
 
 // Esta función crea un nuevo deck
 const crearDeck = () => {
-
 for (let i = 2; i <= 10; i++) {
 for (let tipo of tipos) {
     deck.push(i + tipo);
 }
 }
-
 for (let tipo of tipos) {
 for (let esp of especiales) {
     deck.push(esp + tipo);
@@ -71,7 +73,6 @@ const valor = carta.substring(0, carta.length -1 );
 return ( isNaN( valor ) ) ?
         ( valor === 'A' ) ? 11 : 10 
         : valor * 1;
-
 }
 const valor = valorCarta( pedirCarta() );
 //console.log({valor}); removido para evitar muchos clg 
@@ -90,11 +91,12 @@ imgCarta.classList.add('carta');  // agrega la clase carta
 divCartasComputadora.append( imgCarta ) ; // agrega la carta al div
 
 if ( puntosMinimos > 21 ) {
-    break;
+break;
 }
 } while ( ( puntosComputadora < puntosMinimos ) && ( puntosMinimos <= 21 ) );
 
 setTimeout(() => {   // tiempo para que se vea la ultima carta
+
 // Mensajes de victoria
     if ( puntosComputadora === puntosMinimos ) {
     alert('Nadie gana :(');
@@ -108,11 +110,8 @@ setTimeout(() => {   // tiempo para que se vea la ultima carta
     } else {
     alert('Computadora gana');
     }
-
     }, 1000);// fin del time Out linea 102
-
-}
-
+    } // fin de la funcion turno computadora
 
 //Eventos
 
@@ -168,3 +167,5 @@ btnNuevo.addEventListener('click', () => {
     btnPlantarse.disabled = false;
 
 });
+
+})();
